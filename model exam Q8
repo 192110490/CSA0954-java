@@ -1,0 +1,20 @@
+class Bank {
+   String name;
+   double rate;
+   public Bank(String name, double rate) {
+       this.name = name;
+       this.rate = rate;
+   }
+   public double getRate() {
+       return rate;
+   }
+   public static void main(String[] args) {
+       Bank sbi = new Bank("SBI", 8.4);
+       Bank icici = new Bank("ICICI", 7.3);
+       Bank axis = new Bank("AXIS", 9.7);
+       System.out.println("Rate of interest for different banks:");
+       System.out.println(sbi.name + ": " + sbi.getRate() + "%");
+       System.out.println(icici.name + ": " + icici.getRate() + "%");
+       System.out.println(axis.name + ": " + axis.getRate() + "%");
+   }
+}
