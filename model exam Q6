@@ -1,0 +1,28 @@
+import java.util.Arrays;
+public class CompositeNumberCounter {
+    public static boolean isPrime(int n) {
+        if (n <= 1) {
+            return false;
+        }
+        for (int i = 2; i * i <= n; i++) {
+            if (n % i == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+    public static int countCompositeNumbers(int[] arr) {
+        int count = 0;
+        for (int num : arr) {
+            if (!isPrime(num)) {
+                count++;
+            }
+        }
+        return count;
+    }
+    public static void main(String[] args) {
+        int[] arr = {16,18,27,16,23,21,19};
+        int compositeCount = countCompositeNumbers(arr);
+        System.out.println("Number of composite numbers: " + compositeCount);
+    }
+}
